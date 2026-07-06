@@ -10,4 +10,4 @@ Canon DSLR Camera, Jan 8–Jan 12 (existing booking is Jan 10–Jan 15).
 
 ## AI use
 
-I found and fixed the bugs myself after reading through `app.py` and `index.html`. I used Cursor to verify my changes — checking overlap edge cases, inclusive day counting, and maintenance filtering. I also ran the app locally (`python app.py`), reproduced the double-booking and PHP 0 cases in the browser, confirmed the HD Projector no longer appears in the dropdown, and checked that changing the end date updates the total.
+I ran the app locally and identified bugs by reviewing `app.py` and `index.html`. I used Cursor to verify these bugs and validate my fixes against edge cases, including date range overlaps, inclusive day counting, and maintenance filtering. I also used Cursor to clean up the code for readability and consistency.
