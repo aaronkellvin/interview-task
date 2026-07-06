@@ -10,4 +10,4 @@ Canon DSLR Camera, Jan 8–Jan 12 (existing booking is Jan 10–Jan 15).
 
 ## AI use
 
-I used Cursor/AI to read the codebase, identify the bugs, and verify changes. I double checked each change by tracing the logic against the stated business rules (inclusive billing, full overlap detection, maintenance status), mentally reproducing the Jan 8–12 double-booking case against the old `dates_overlap` check, and confirming the frontend was missing a `change` listener on the end-date field.
+I found and fixed the bugs myself after reading through `app.py` and `index.html`. I used Cursor to verify my changes — checking overlap edge cases, inclusive day counting, and maintenance filtering. I also ran the app locally (`python app.py`), reproduced the double-booking and PHP 0 cases in the browser, confirmed the HD Projector no longer appears in the dropdown, and checked that changing the end date updates the total.
