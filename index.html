@@ -9,6 +9,7 @@
     h1 { font-size: 1.4rem; }
     label { display: block; margin: 12px 0 4px; font-weight: 600; font-size: 0.9rem; }
     select, input { width: 100%; padding: 8px; font-size: 1rem; box-sizing: border-box; }
+    select option:disabled { color: #888; }
     button { margin-top: 16px; padding: 10px 16px; font-size: 1rem; cursor: pointer; }
     .total { margin-top: 16px; font-size: 1.2rem; font-weight: 700; }
     .message { margin-top: 16px; padding: 10px; border-radius: 6px; }
@@ -48,7 +49,13 @@
       equipmentList.forEach(item => {
         const opt = document.createElement("option");
         opt.value = item.id;
-        opt.textContent = `${item.name} (PHP ${item.daily_rate}/day)`;
+        const rate = `PHP ${item.daily_rate}/day`;
+        if (item.status !== "available") {
+          opt.disabled = true;
+          opt.textContent = `${item.name} (${rate}) — under maintenance`;
+        } else {
+          opt.textContent = `${item.name} (${rate})`;
+        }
         select.appendChild(opt);
       });
     }
@@ -70,7 +77,7 @@
       const to = document.getElementById("to").value;
       const totalEl = document.getElementById("total");
 
-      if (!equipment || !from || !to) {
+      if (!equipment || equipment.status !== "available" || !from || !to) {
         totalEl.textContent = "Total: PHP 0.00";
         return;
       }
