@@ -104,7 +104,8 @@
 
       if (res.ok) {
         messageEl.className = "message ok";
-        messageEl.textContent = `Booked! Total PHP ${data.total.toFixed(2)}.`;
+        const name = data.customer || body.customer || "Customer";
+        messageEl.textContent = `Booked for ${name}! Total PHP ${data.total.toFixed(2)}.`;
       } else {
         messageEl.className = "message err";
         messageEl.textContent = data.error;

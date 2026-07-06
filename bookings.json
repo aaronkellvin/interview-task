@@ -28,5 +28,35 @@
     "to_date": "2026-07-31",
     "total": 28500.0,
     "status": "confirmed"
+  },
+  {
+    "id": 4,
+    "equipment_id": 4,
+    "equipment_name": "PA Speaker System",
+    "customer": "Martin",
+    "from_date": "2026-07-08",
+    "to_date": "2026-07-10",
+    "total": 5400.0,
+    "status": "confirmed"
+  },
+  {
+    "id": 5,
+    "equipment_id": 4,
+    "equipment_name": "PA Speaker System",
+    "customer": "Martin",
+    "from_date": "2026-07-17",
+    "to_date": "2026-07-26",
+    "total": 18000.0,
+    "status": "confirmed"
+  },
+  {
+    "id": 6,
+    "equipment_id": 2,
+    "equipment_name": "Cordless Drill",
+    "customer": "Josh",
+    "from_date": "2026-07-08",
+    "to_date": "2026-07-09",
+    "total": 960.0,
+    "status": "confirmed"
   }
 ]
